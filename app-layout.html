@@ -29,104 +29,103 @@
                 box-sizing: border-box;
             }
 
-            html {
+            body {
                 font-family: "Rubik", sans-serif;
-            }
-
-            .container {
-                display: grid;
-                grid-template-columns: auto 1fr;
+                color: #343a40;
+                font-weight: bold;
+                text-align: center;
+                font-size: 24px;
                 height: 100vh;
-            }
 
-            .nav {
-                color: #fff;
-                background-color: #212529;
-                padding: 12px;
-            }
-
-            .grid-3-col {
                 display: grid;
-                grid-template-columns: 1fr 3fr auto;
+                grid-template-columns: 80px 400px 1fr 250px;
+                grid-template-rows: 80px 1fr;
             }
 
-            .options {
-                display: flex;
-                justify-content: space-between;
-                padding: 16px 32px;
-                grid-column: span 3;
-                background-color: #364fc7;
+            nav,
+            main,
+            section,
+            aside {
+                padding-top: 24px;
             }
 
-            .options--buttons {
+            nav {
+                background-color: #343a40;
+                grid-row: 1 / -1;
+                color: #fff;
+            }
+
+            menu {
                 display: flex;
+                align-items: center;
                 gap: 12px;
+
+                background-color: #7048e8;
+                color: #fff;
+                grid-column: 2/-1;
+                padding: 0 40px;
             }
 
-            .options--buttons button {
-                padding: 8px;
+            button {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold;
+                background-color: #5f3dc4;
+                border: none;
+                cursor: pointer;
+                color: #fff;
+                padding: 8px 12px;
             }
 
-            .email-box {
+            button:last-child {
+                background-color: #d6336c;
+                margin-left: auto;
+            }
+
+            section {
                 display: flex;
                 flex-direction: column;
-                padding: 32px;
-                gap: 32px;
-                background-color: #dee2e6;
+                gap: 40px;
+                overflow-y: scroll;
+
+
+                background-color: #e9ecef;
+                padding: 40px;
             }
 
-            .email-box div {
-                padding: 32px;
-                font-size: 24px;
-                font-weight: 600;
-                text-align: center;
+            .email {
                 background-color: #adb5bd;
+                height: 96px; 
+                flex-shrink: 0;            
             }
 
-            .email-view {
-                background-color: #f8f9fa;
-            }
-
-            .additional-info {
-                background-color: #dee2e6;
-                padding: 0px 48px;
-            }
-
-            .email-view,
-            .additional-info {
-                height: 100vh;
-                padding-top: 16px;
-                text-align: center;
-                font-size: 20px;
-                font-weight: 600;
+            aside {
+                background-color: #e9ecef;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="nav"><h1>Nav</h1></div>
-            <div class="app">
-                <div class="grid-3-col">
-                    <div class="options">
-                        <div class="options--buttons">
-                            <button>New</button>
-                            <button>Reply</button>
-                            <button>Foward</button>
-                            <button>Mark Unread</button>
-                        </div>
-                        <button>Trash</button>
-                    </div>
-                    <div class="email-box">
-                        <div>Email 1</div>
-                        <div>Email 2</div>
-                        <div>Email 3</div>
-                        <div>Email 4</div>
-                        <div>Email 5</div>
-                    </div>
-                    <div class="email-view">Email View</div>
-                    <div class="additional-info">Additional Info</div>
-                </div>
-            </div>
-        </div>
+        <nav>Nav</nav>
+        <menu>
+            <button>New</button>
+            <button>Reply</button>
+            <button>Forward</button>
+            <button>Mark unread</button>
+            <button>Trash</button>
+        </menu>
+        <section>
+            <div class="email">Email 1</div>
+            <div class="email">Email 2</div>
+            <div class="email">Email 3</div>
+            <div class="email">Email 4</div>
+            <div class="email">Email 5</div>
+            <div class="email">Email 6</div>
+            <div class="email">Email 7</div>
+            <div class="email">Email 8</div>
+            <div class="email">Email 9</div>
+            <div class="email">Email 10</div>
+        </section>
+        <main>Email View</main>
+        <aside>Additional Info</aside>
     </body>
 </html>
